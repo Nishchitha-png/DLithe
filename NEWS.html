@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <title> News port</title>
+        <style>
+            #ex {
+                text-align: center;
+            padding: 35px;
+            font-size: xx-large;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+            }
+            nav {
+            background: #d8cece;
+            color: #fff;
+            padding: 25px;
+            text-align: center;
+        }
+        nav a {
+            color: #8025e1;
+            margin: 0 15px;
+            text-decoration: none;
+
+        }
+        nav :hover {
+  background-color: rgb(177, 177, 52);
+  font-size: 18px;
+}
+.search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .search-container button {
+            background: #8025e1;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .search-container button:hover {
+            background: #5e1bb5;
+        }
+.ad-banner {
+            width: 100%;
+            background-color: #ffcc00;
+            color: #333;
+            text-align: center;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .ad-banner a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .ad-banner a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #004999;
+        }
+        .marquee {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            background: #ffcc00;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        .marquee div {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0%); }
+            to { transform: translateX(-100%); }
+        }
+        .main-content {
+            display: flex;
+            flex-direction: row;
+            margin-top: 30px;
+        }
+        .articles {
+            flex: 3;
+            background: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            margin-right: 25px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        #pic{
+            background-color: aqua;
+        }
+    
+
+        .sidebar {
+            flex: 1;
+            color: red;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+            footer {
+            text-align: center;
+            padding: 25px;
+            background: #333;
+            color: #fff;
+            margin-top: 30px;
+            font-size: 18px;
+           
+        }
+        </style>
+
+    </head>
+    <body>
+        
+         <div id="ex">
+        <center> NISHCHITHA NEWS </center>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+                </div>
+                <nav>
+                    <a href="NEWS.html">Home</a>
+                    <a href="politics.html">Politics</a>
+                    <a href="Sports.html">Sports</a>
+                    <a href="Technology.html">Technology</a>
+                    <a href="Health.html">Health</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+                
+            </nav>
+            <div class="ad-banner">
+                <div class="marquee">
+                    <div>🚀 Limited Time Offer! Get 20% Off on All Travels with company. <a href="travel.html" target="_blank">Just One Click</a></div>
+                </div>
+            </div>
+                
+            
+                <div class="container">
+                    <div class="main-content">
+                        <div class="articles">
+                          <h2>  <div class="section-title">Today's Top Story</div> </h2>
+                            
+    <table>
+        <tr>
+            <th>Headline</th>
+        </tr>
+        <tr>
+            <td>German bakery blast convict's plea on solitary confinement rejected by High Court.</td>
+        </tr>
+        <tr>
+            <td>Congress faces internal turmoil after BJP's sweep in Chhattisgarh urban polls.</td>
+        </tr>
+    </table>
+
+    <h2><div class="section-title">Latest Developments</div></h2>
+    <table>
+        <tr>
+            <th>Headline</th>
+        </tr>
+        <tr>
+            <td>P D Singh named new Stanchart India CEO.</td>
+        </tr>
+    </table>
+    <center><button class="button"><a href="politics.html">Read More</a></button></center>
+                        </div>
+                        
+                    <div class="sidebar">
+                        <h2>Breaking News</h2>
+                        <ul>
+                            <li><a href="https://timesofindia.indiatimes.com/india/rekha-gupta-is-delhi-cm-bjp-surprises-again-picks-first-time-mla-over-heavyweights/articleshow/118393944.cms">Headline 1</a></li>
+                            <li><a href="https://www.hindustantimes.com/india-news/maha-kumbh-sangam-water-unsafe-due-to-high-bod-level-cpcb-drops-fresh-report-after-faecal-bacteria-findings-101739972091876.html">Headline 2</a></li>
+                            <li><a href="https://www.livelaw.in/top-stories/supreme-court-pleas-challenging-removal-of-cji-from-election-commissioner-appointment-panel-adjourned-to-march-19-284424">Headline 3</a></li>
+                        </ul>
+                    </div>
+                    </div></div>
+                    
+                    
+                    <div id ="pic"><h1>Elon Musk says providing ‘tech support’ to Donald Trump, ensuring fulfillment of executive orders</h1></div>
+       <div > <center><img src="https://www.hindustantimes.com/ht-img/img/2025/02/19/550x309/donald_trump_and_elon_musk_1739934668739_1739934669115.jpg"></center></div>
+                <br>
+<section>
+
+                <footer>
+
+                    <p>copyright&copy; 2025 Daily News. All Rights Reserved.</p>
+                </footer>
+            </section>
+    </body>
+    </html>
