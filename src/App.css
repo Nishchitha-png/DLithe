@@ -1,38 +1,580 @@
-.App {
-  text-align: center;
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header Styles */
+.app-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(to right, #007bff, #00a8ff);
+  padding: 20px;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 80px;
+  height: auto;
+  margin-left: 15px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.header-btn {
+  background: white;
+  color: #007bff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.header-btn:hover {
+  background: #0056b3;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Navigation Menu */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1001;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-menu.active {
+  left: 0;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  padding: 15px;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.nav-list a:hover {
+  background: #555;
+  display: block;
+  padding: 10px;
+}
+
+.image-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.travel-image {
+  width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+}
+
+/* Travel Information */
+.travel-sections {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Increased spacing between cards */
+  padding: 50px; /* More padding for better spacing */
+}
+
+.card {
+  flex: 1;
+  max-width: 500px; /* Increased width */
+  min-height: 350px; /* Ensures the card is taller */
+  padding: 30px; /* More padding for a bigger feel */
+  border-radius: 12px; /* Slightly rounded corners */
+  background: white;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px); /* More pronounced hover effect */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.destination-image {
+  width: 100%;
+  height: 300px; /* Increased image height */
+  object-fit: cover; /* Ensures the image fills the space properly */
+  border-radius: 10px; /* Keeps rounded corners */
+}
+
+
+@media (max-width: 768px) {
+  .travel-sections {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    max-width: 90%; /* Make the cards take more space on smaller screens */
+    min-height: 300px;
+  }
+}
+
+
+/* Scrolling Text */
+.scrolling-text-container {
+  width: 100%;
+  overflow: hidden;
+  background: #007bff;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: bold;
+  animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Travel Sections */
+.travel-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+
+.about-us-card {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 90px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-us-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us-card li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+
+/* Animated Lines */
+.animated-lines {
+  height: 5px;
+  background: linear-gradient(to right, #007bff, #00a8ff);
+  margin: 20px 0;
+}
+
+/* Cookies Banner */
+.cookies-banner {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cookies-accept, .cookies-cancel {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookies-cancel {
+  background: #ff4d4d;
+}
+
+.cookies-accept:hover {
+  background: #005bb5;
+}
+
+.cookies-cancel:hover {
+  background: #cc0000;
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  background: #007bff;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    display: none;
+  }
+
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .destination-image {
+    height: 200px;
+  }
+
+  .about-us {
+    padding: 20px;
+  }
+
+  .app-footer {
+    padding: 30px 10px;
+  }
+}
+.travel-sections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 750px;
+  margin: 40px auto;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.destination-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.national {
+  background-color: #f5f5f5; /* Light gray background */
+}
+
+.international {
+  background-color: #e3f2fd; /* Light blue background */
+}
+
+@media (max-width: 768px) {
+  .travel-sections {
+    flex-direction: column;
+  }
+}
+.why-choose-us {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.card {
+  flex: 1;
+  max-width: 300px;
+  min-height: 180px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+h3 {
+  text-align: center;
+  font-size: 26px;
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+.card h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+
+.why-travel {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.why-travel h3 {
+  font-size: 24px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.why-travel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-travel li {
+  font-size: 18px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #444;
+  font-weight: 500;
+}
+
+.why-travel li::before {
+  content: "✔️";
+  color: #28a745;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .why-travel {
+    max-width: 90%;
+  }
+}
+.featured-destination {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.featured-destination h3 {
+  font-size: 26px;
+  color: #0077cc;
+  margin-bottom: 15px;
+}
+
+.featured-destination p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.featured-destination strong {
+  color: #d32f2f; /* Highlight color */
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .featured-destination {
+    max-width: 90%;
+  }
+}
+.book-now-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f8ff; /* Light blue background */
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.book-now-section h3 {
+  font-size: 24px;
+  color: #0077cc; /* Blue heading */
+  margin-bottom: 10px;
+}
+
+.book-now-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.book-now-btn {
+  padding: 12px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .book-now-section {
+    max-width: 90%;
+  }
+}
+.travel-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.travel-section h2 {
+  font-size: 28px;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.travel-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #333;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
